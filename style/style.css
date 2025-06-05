@@ -1,0 +1,16 @@
+body {
+  background: url("background.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+}
+header nav ul li a {
+  border: 3px solid #fff;
+}
+header nav ul li a:hover {
+  background-color: #ffd700;
+  border-radius: 3%;
+}/*# sourceMappingURL=style.css.map */
