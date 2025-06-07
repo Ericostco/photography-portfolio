@@ -1,25 +1,104 @@
 body {
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
+    color: #222;
 }
 
 header {
     position: relative;
-    z-index: 2;
+    z-index: 1000;
 
     nav {
         ul {
             li {
-
                 a {
-                    border: 3px solid #fff;
-
                     &:hover {
                         background-color: #ffd700;
-                        border-radius: 3%;
                     }
                 }
             }
         }
     }
+}
+
+// Theme switch style
+.theme-switch {
+    display: flex;
+    align-items: center;
+
+    .theme-switch-input {
+        display: none;
+    }
+
+    .theme-switch-label {
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #333;
+        transition: color 0.3s;
+        margin-bottom: 0;
+    }
+
+    .theme-switch-input:checked+.theme-switch-label {
+        color: #ffd700;
+    }
+}
+
+// Dark mode styles
+body.darkmode {
+    background: #181a1b;
+    color: #f1f1f1;
+
+    header {
+        background: #23272b;
+
+        .fw-bold,
+        .nav-link {
+            color: #f1f1f1;
+        }
+    }
+
+    .shadow-sm {
+        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .3);
+    }
+
+    .nav-link.active,
+    .nav-link:hover {
+        background-color: #444;
+        color: #ffd700;
+    }
+
+    .theme-switch-label {
+        color: #ffd700;
+    }
+
+    footer {
+        background: #23272b;
+        color: #f1f1f1;
+    }
+}
+
+.watermark {
+    font-family: 'Brush Script MT', 'Segoe Script', 'Comic Sans MS', cursive, sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #fff;
+    opacity: 0.6;
+    text-shadow: 1px 1px 6px #000, 0 0 2px #000;
+    pointer-events: none;
+    user-select: none;
+}
+
+// 攝影主題區塊圖片懸浮效果
+.photo-theme-item img {
+    transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+    border: 3px solid transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.photo-theme-item img:hover {
+    transform: scale(1.1);
+    border: 3px solid #ffd700;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+    cursor: pointer;
 }

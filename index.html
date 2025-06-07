@@ -19,10 +19,10 @@
 </head>
 
 <body>
-    <header class="d-flex justify-content-between align-items-center p-3 bg-white shadow-sm">
+    <header class="d-flex justify-content-between align-items-center p-3 shadow-sm">
         <div class="d-flex align-items-center">
             <img src="/img/header-icon.svg" alt="網站圖示" width="40" height="40" class="me-2">
-            <span class="fs-4 fw-bold">我的攝影作品</span>
+            <h1 class="fs-4 fw-bold">我的攝影作品</h1>
         </div>
         <nav>
             <ul class="nav">
@@ -32,29 +32,58 @@
                 <li class="nav-item"><a class="nav-link" href="#">聯絡我們</a></li>
             </ul>
         </nav>
+        <div class="theme-switch ms-3">
+            <input type="checkbox" id="darkModeSwitch" class="theme-switch-input">
+            <label for="darkModeSwitch" class="theme-switch-label" title="切換深色模式">
+                <i class="fa fa-moon"></i>
+            </label>
+        </div>
     </header>
 
     <main>
-        <!-- Carousel -->
         <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" style="z-index: 1;">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/1.jpg" class="d-block w-100" alt="旅遊圖片1" style="height: 45rem; object-fit: cover;">
+                    <div class="position-relative">
+                        <img src="img/1.jpg" class="d-block w-100" alt="旅遊圖片1"
+                            style="height: 45rem; object-fit: cover;">
+                        <span class="watermark position-absolute bottom-0 end-0 m-3">BO GUEI CHEN</span>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/2.jpg" class="d-block w-100" alt="旅遊圖片2" style="height: 45rem; object-fit: cover;">
+                    <div class="position-relative">
+                        <img src="img/2.jpg" class="d-block w-100" alt="旅遊圖片2"
+                            style="height: 45rem; object-fit: cover;">
+                        <span class="watermark position-absolute bottom-0 end-0 m-3">BO GUEI CHEN</span>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/3.jpg" class="d-block w-100" alt="旅遊圖片3" style="height: 45rem; object-fit: cover;">
+                    <div class="position-relative">
+                        <img src="img/3.jpg" class="d-block w-100" alt="旅遊圖片3"
+                            style="height: 45rem; object-fit: cover;">
+                        <span class="watermark position-absolute bottom-0 end-0 m-3">BO GUEI CHEN</span>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/4.jpg" class="d-block w-100" alt="旅遊圖片4" style="height: 45rem; object-fit: cover;">
+                    <div class="position-relative">
+                        <img src="img/4.jpg" class="d-block w-100" alt="旅遊圖片4"
+                            style="height: 45rem; object-fit: cover;">
+                        <span class="watermark position-absolute bottom-0 end-0 m-3">BO GUEI CHEN</span>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/5.jpg" class="d-block w-100" alt="旅遊圖片5" style="height: 45rem; object-fit: cover;">
+                    <div class="position-relative">
+                        <img src="img/5.jpg" class="d-block w-100" alt="旅遊圖片5"
+                            style="height: 45rem; object-fit: cover;">
+                        <span class="watermark position-absolute bottom-0 end-0 m-3">BO GUEI CHEN</span>
+                    </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/6.jpg" class="d-block w-100" alt="旅遊圖片6" style="height: 45rem; object-fit: cover;">
+                    <div class="position-relative">
+                        <img src="img/6.jpg" class="d-block w-100" alt="旅遊圖片6"
+                            style="height: 45rem; object-fit: cover;">
+                        <span class="watermark position-absolute bottom-0 end-0 m-3">BO GUEI CHEN</span>
+                    </div>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
@@ -65,29 +94,28 @@
             </button>
         </div>
 
-        <!-- 主題區塊 -->
         <section class="container py-5">
-            <h2 class="text-center mb-4">遊玩主題</h2>
+            <h2 class="text-center mb-4">攝影主題</h2>
             <div class="row justify-content-center g-4">
-                <div class="col-6 col-md-3 text-center">
+                <div class="col-6 col-md-3 text-center photo-theme-item">
                     <img src="img/1.jpg" class="rounded-circle mb-2" alt="主題1" width="120" height="120"
                         style="object-fit: cover;">
                     <div>自然風光</div>
                 </div>
-                <div class="col-6 col-md-3 text-center">
+                <div class="col-6 col-md-3 text-center photo-theme-item">
                     <img src="img/2.jpg" class="rounded-circle mb-2" alt="主題2" width="120" height="120"
                         style="object-fit: cover;">
-                    <div>文化體驗</div>
+                    <div>祭典節慶</div>
                 </div>
-                <div class="col-6 col-md-3 text-center">
+                <div class="col-6 col-md-3 text-center photo-theme-item">
                     <img src="img/3.jpg" class="rounded-circle mb-2" alt="主題3" width="120" height="120"
                         style="object-fit: cover;">
-                    <div>美食之旅</div>
+                    <div>文化風韻</div>
                 </div>
-                <div class="col-6 col-md-3 text-center">
+                <div class="col-6 col-md-3 text-center photo-theme-item">
                     <img src="img/4.jpg" class="rounded-circle mb-2" alt="主題4" width="120" height="120"
                         style="object-fit: cover;">
-                    <div>親子同遊</div>
+                    <div>歷史建築</div>
                 </div>
             </div>
         </section>
@@ -99,6 +127,7 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js'
         integrity='sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO'
         crossorigin='anonymous'></script>
