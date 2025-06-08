@@ -1,15 +1,83 @@
 body {
-  background: url("background.jpg") no-repeat center center fixed;
+  background-color: #fff;
+  position: relative;
+  color: #222;
+  background: url("/img/6.jpg") no-repeat center center fixed;
   background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
   color: #222;
 }
-
-header {
-  position: relative;
+body header {
+  background-color: #fff;
   z-index: 1000;
 }
-header nav ul li a:hover {
+body header nav ul li a:hover {
   background-color: #ffd700;
+}
+body .watermark {
+  font-family: "Brush Script MT", "Segoe Script", "Comic Sans MS", cursive, sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #fff;
+  opacity: 0.6;
+  text-shadow: 1px 1px 6px #000, 0 0 2px #000;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body main {
+  background-color: #fff;
+}
+body main .photo-theme-item img {
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+  border: 3px solid transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+body main .photo-theme-item img:hover {
+  transform: scale(1.1);
+  border: 3px solid #ffd700;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  cursor: pointer;
+}
+body .fixed-background-image {
+  width: 100%;
+  height: 50vh;
+}
+body .google-map {
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+}
+body .google-map h3 {
+  background-color: #fff;
+  font-size: 2rem;
+  font-weight: bolder;
+  padding: 1rem;
+}
+body .google-map iframe {
+  width: 100%;
+  height: 40vh;
+  padding: 0;
+  margin: 0;
+  display: block;
+  border: none;
+  box-sizing: border-box;
+}
+body footer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5rem;
+  width: 100%;
+  height: 10vh;
+  text-align: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: transparent;
 }
 
 .theme-switch {
@@ -33,6 +101,12 @@ header nav ul li a:hover {
 body.darkmode {
   background: #181a1b;
   color: #f1f1f1;
+  background: url("/img/6.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  color: #222;
 }
 body.darkmode header {
   background: #23272b;
@@ -40,6 +114,9 @@ body.darkmode header {
 body.darkmode header .fw-bold,
 body.darkmode header .nav-link {
   color: #f1f1f1;
+}
+body.darkmode main {
+  background-color: #23272b;
 }
 body.darkmode .shadow-sm {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3);
@@ -52,34 +129,18 @@ body.darkmode .nav-link:hover {
 body.darkmode .theme-switch-label {
   color: #ffd700;
 }
-body.darkmode footer {
-  background: #23272b;
+body.darkmode .google-map {
+  background-color: #23272b;
   color: #f1f1f1;
 }
-
-.watermark {
-  font-family: "Brush Script MT", "Segoe Script", "Comic Sans MS", cursive, sans-serif;
-  font-weight: bold;
-  font-size: 2rem;
-  color: #fff;
-  opacity: 0.6;
-  text-shadow: 1px 1px 6px #000, 0 0 2px #000;
-  pointer-events: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+body.darkmode .google-map h3 {
+  background-color: #23272b;
+  color: #ffd700;
 }
-
-.photo-theme-item img {
-  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
-  border: 3px solid transparent;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+body.darkmode .photo-theme-items {
+  color: #f1f1f1;
 }
-
-.photo-theme-item img:hover {
-  transform: scale(1.1);
-  border: 3px solid #ffd700;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
-  z-index: 2;
-  cursor: pointer;
+body.darkmode .photo-theme-items img {
+  background-color: #23272b;
+  border-color: #444;
 }/*# sourceMappingURL=style.css.map */

@@ -1,25 +1,103 @@
 body {
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #222;
-}
-
-header {
+    background-color: #fff;
     position: relative;
-    z-index: 1000;
+    color: #222;
 
-    nav {
-        ul {
-            li {
-                a {
-                    &:hover {
-                        background-color: #ffd700;
+    background: url("/img/6.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    color: #222;
+
+    header {
+        background-color: #fff;
+        z-index: 1000;
+
+        nav {
+            ul {
+                li {
+                    a {
+                        &:hover {
+                            background-color: #ffd700;
+                        }
                     }
                 }
             }
         }
     }
+
+    .watermark {
+        font-family: 'Brush Script MT', 'Segoe Script', 'Comic Sans MS', cursive, sans-serif;
+        font-weight: bold;
+        font-size: 2rem;
+        color: #fff;
+        opacity: 0.6;
+        text-shadow: 1px 1px 6px #000, 0 0 2px #000;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    main {
+        background-color: #fff;
+
+        .photo-theme-item img {
+            transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+            border: 3px solid transparent;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .photo-theme-item img:hover {
+            transform: scale(1.1);
+            border: 3px solid #ffd700;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+            z-index: 2;
+            cursor: pointer;
+        }
+    }
+
+    .fixed-background-image {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .google-map {
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+
+        h3 {
+            background-color: #fff;
+            font-size: 2rem;
+            font-weight: bolder;
+            padding: 1rem;
+        }
+
+        iframe {
+            width: 100%;
+            height: 40vh;
+            padding: 0;
+            margin: 0;
+            display: block;
+            border: none;
+            box-sizing: border-box;
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding-top: 2.5rem;
+        width: 100%;
+        height: 10vh;
+        text-align: center;
+        align-items: center;
+        color: #ffffff;
+        background-color: transparent;
+    }
 }
+
 
 // Theme switch style
 .theme-switch {
@@ -48,6 +126,13 @@ body.darkmode {
     background: #181a1b;
     color: #f1f1f1;
 
+    background: url("/img/6.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    color: #222;
+
     header {
         background: #23272b;
 
@@ -55,6 +140,10 @@ body.darkmode {
         .nav-link {
             color: #f1f1f1;
         }
+    }
+
+    main {
+        background-color: #23272b;
     }
 
     .shadow-sm {
@@ -71,34 +160,22 @@ body.darkmode {
         color: #ffd700;
     }
 
-    footer {
-        background: #23272b;
-        color: #f1f1f1;
+    .google-map {
+        background-color: #23272b;
+        color: #f1f1f1; // 主要文字顏色
+
+        h3 {
+            background-color: #23272b;
+            color: #ffd700;
+        }
     }
-}
 
-.watermark {
-    font-family: 'Brush Script MT', 'Segoe Script', 'Comic Sans MS', cursive, sans-serif;
-    font-weight: bold;
-    font-size: 2rem;
-    color: #fff;
-    opacity: 0.6;
-    text-shadow: 1px 1px 6px #000, 0 0 2px #000;
-    pointer-events: none;
-    user-select: none;
-}
+    .photo-theme-items {
+        color: #f1f1f1; // 主題名稱文字顏色
 
-// 攝影主題區塊圖片懸浮效果
-.photo-theme-item img {
-    transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
-    border: 3px solid transparent;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.photo-theme-item img:hover {
-    transform: scale(1.1);
-    border: 3px solid #ffd700;
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
-    z-index: 2;
-    cursor: pointer;
+        img {
+            background-color: #23272b;
+            border-color: #444;
+        }
+    }
 }
